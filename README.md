@@ -656,6 +656,9 @@ After using the raft protocol, the throughput of the entire cluster drops a litt
 
 ### Version update record
 
+#### v3.0.0
+- [commit](https://github.com/yemingfeng/sdb/commit/08a7f05e13e5e7197eb54385dc116a0048cd2f3a) Implemented master-slave architecture based on raft
+
 #### v1.7.0
 
 - [commit](https://github.com/yemingfeng/sdb/commit/5e29f5bf50847898cbffa9046df75f2f4fa3ffb6)

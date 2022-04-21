@@ -75,11 +75,13 @@ sh ./scripts/start_sdb.sh
 ```
 
 #### 启动从节点 1
+
 ```shell
 sh ./scripts/start_slave1.sh
 ```
 
 #### 启动从节点 2
+
 ```shell
 sh ./scripts/start_slave2.sh
 ```
@@ -324,7 +326,7 @@ server.rate | 每秒 qps 的限制 | 30000
 cluster.path | raft 日志存储的目录 | ./master/raft
 cluster.node_id | raft 协议标识的 node id，得唯一 | 1
 cluster.address | raft 通讯的地址 | 127.0.0.1:12000
-cluster.master | 现有集群中的主节点地址，通过主节点暴露的 http【http_port】 接口进行加入，若是新集群，则为空 | 
+cluster.master | 现有集群中的主节点地址，通过主节点暴露的 http【http_port】 接口进行加入，若是新集群，则为空 |
 cluster.timeout | raft 协议 apply timeout，单位是 ms | 10000
 cluster.join | 作为从节点，是否要加入到主节点；首次加入需要置为 true，加入后再次启动需置为 false | false
 
@@ -606,6 +608,7 @@ grpc 是一个非常不错的选择，只需要使用 SDB proto 文件，就能�
 为了更近一步优化 SDB，为 SDB 加入了主从架构。
 
 golang 语言下的 raft 协议有三种选择，分别是：
+
 - [hashicorp/raft](https://github.com/hashicorp/raft)
 - [etcd/raft](https://github.com/etcd-io/etcd/blob/main/raft/raft.go)
 - [dragonboat/raft](https://github.com/lni/dragonboat)
@@ -617,6 +620,11 @@ golang 语言下的 raft 协议有三种选择，分别是：
 ------
 
 ### 版本更新记录
+
+#### v3.0.0
+
+- [commit](https://github.com/yemingfeng/sdb/commit/08a7f05e13e5e7197eb54385dc116a0048cd2f3a) 基于
+  raft 实现了主从架构
 
 #### v1.7.0
 

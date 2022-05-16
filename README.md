@@ -587,7 +587,7 @@ this approach is crude and cannot be generalized.
 Referring to [TiDB Design](https://pingcap.com/zh/blog/tidb-internal-2), SDB has designed a
 relational model to KV structure.
 
-In SBD, data is constructed from Collections and Rows. in:
+In SDB, data is constructed from Collections and Rows. in:
 
 - [Collection](https://github.com/yemingfeng/sdb/blob/master/internal/store/collection.go#L30)
   A table similar to a database is a logical concept. Each dataType (such as List) corresponds to a

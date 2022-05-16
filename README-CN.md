@@ -558,7 +558,7 @@ func LPop(key []byte, values [][]byte) (bool, error) {
 
 参考了 [TiDB 的设计](https://pingcap.com/zh/blog/tidb-internal-2) ，SDB 做了一层关系模型到 KV 结构的设计。
 
-在 SBD 中，数据由 Collection 和 Row 构造。 其中：
+在 SDB 中，数据由 Collection 和 Row 构造。 其中：
 
 - [Collection](https://github.com/yemingfeng/sdb/blob/master/internal/store/collection.go#L30)
   类似数据库的一张表，是逻辑概念。每个 dataType(如 List) 对应一个 Collection。一个 Collection 包含多个 Row。
